@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        
+        <input />
+        <select></select>
+        <textarea></textarea>
+        
+        
+        -->
+    <form action="procesar.php" method="GET" enctype="multipart/form-data"><!-- POST -->
+
+
+
+        <input type="button" id="" name="button" value="Boton"> <br>
+        <input type="checkbox" name="" id="" value="yes" checked> yes <br>
+        <input type="checkbox" name="" id="" value="no"> no <br>
+        <label>
+            <input type="checkbox" name="" id="" value="yes" checked> yes <br>
+        </label>
+        
+        <label>
+            <input type="checkbox" name="" id="" value="no"> no <br>
+        </label>
+
+        <input type="color" name="" id="" value="#00FF00"> <br>
+        <input type="date" name="" id="" value="2024-10-23">
+        <input type="datetime" name="" id=""> <br>
+        <input type="datetime-local" name="" id=""> <br>
+        <input type="email" name="" id="" value="lrodriguez@4geeks.co" placeholder="Email"> <br>
+        <input type="file" name="" id="" accept=".pdf"> <br>
+        <input type="file" name="" id="" multiple accept=".jpg,.png,.gif,.jpeg"> <br>
+        <input type="hidden" name="valor_oculto" value="Hola"> <br>
+        <input type="image" src="https://picsum.photos/100/50" alt=""> <br>
+        <input type="month" name="" id="" value="2024-05"> <br>
+        <input type="number" name="" id="" value="10" min="50" max="100"> <br>
+        <input type="password" name="" id="" value="123456" placeholder="Password"> <br>
+        <input type="radio" name="estado_civil" id="" value="soltero" checked> Soltero <br>
+        <input type="radio" name="estado_civil" id="" value="casado"> Casado <br>
+        <input type="range" name="" id="" value="5" min="1" max="10" step="1"> <br>
+        <input type="reset" value="Restaurar a los valores por defecto"> <br>
+        <input type="search" name="" id="" placeholder="Search..."> <br>
+        <input type="submit" value="Enviar"> <br>
+        <input type="tel" name="" id=""> <br>
+        <input type="text" name="" id=""> <br>
+        <input type="time" name="" id="" value="18:00"> <br>
+        <input type="url" name="" id=""> <br>
+        <input type="week" name="" id="" value=""> <br>
+
+
+        <!-- Select -->
+        <select name="" id="">
+            <option value="">SELECCIONE</option>
+            <option value="1">Valor 1</option>
+            <option value="2" selected>Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
+
+        <br>
+
+        <!-- Select -->
+        <select name="" id="" multiple>
+            <option value="1">Valor 1</option>
+            <option value="2" selected>Valor 2</option>
+            <option value="3">Valor 3</option>
+            <option value="4" selected>Valor 4</option>
+        </select>
+
+        <br>
+
+        <!-- Select -->
+        <select name="" id="" multiple>
+            <optgroup label="Group 1">
+                <option value="1">Valor 1</option>
+                <option value="2" selected>Valor 2</option>
+            </optgroup>
+            <optgroup label="Group 2">
+                <option value="3">Valor 3</option>
+                <option value="4" selected>Valor 4</option>
+            </optgroup>
+        </select>
+
+        <br>
+
+        <textarea name="mensaje" id="mensaje" placeholder="mensaje" rows="10" cols="100"></textarea> <br>
+        <span>Cantidad de letras permitidas: </span><span id="total">120</span>
+
+
+        <br>
+        <button type="submit">Submit</button> <br>
+        <button type="submit">Enviar</button> <br>
+        <button type="button">Button</button> <br>
+
+        <label for="search">Search</label>
+        <input type="search" name="" id="search">
+
+    </form>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+
+    <script>
+        let mensaje = document.querySelector('#mensaje');
+        let total = document.querySelector("#total")
+
+        mensaje.addEventListener('keyup', (e) => {
+            let valor = e.target.value;
+            let tam = valor.length;
+            total.innerHTML = parseInt(total.innerHTML) - parseInt(tam)
+        })
+    </script>
+
+</body>
+
+</html>
